@@ -36,6 +36,6 @@ var power = {
 
 		function shootIR(array){
 			Puck.write('LED1.set();\n')
-			Puck.write('Puck.IR(['+array+']);\n')
 			Puck.write('LED1.reset();\n')
+			Puck.write('Puck.IR(['+array+']);\n')
 		}
