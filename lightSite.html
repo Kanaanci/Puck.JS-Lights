@@ -16,15 +16,24 @@ function getSpeech() {
 	recog.continuous = false;
 	recog.interimResults = false;
 	recog.maxAlternative = 5;
+
 	recog.onresult = function(e) {
 	   document.getElementById('saying').innerText = e.results[0][0].transcript;
-	  // alert(e.results[0][0].transcript);
-	  // var speechResult = e.reults[0][0].transcript;
-	  // alert(speechResult);
-	   if(e.results[0][0].transcript == "on")
-	   {
-			shootIR(power.on);
+
+	   switch(e.results[0][0].transcript) {
+	   	case "on":
+	   		shootIR(power.on);
+	   		break;
+	   	case "off": 
+	   		shootIR(power.off);
+	   		break;
+	   	default:
+	   		break;
 	   }
+	  //  if(e.results[0][0].transcript == "on")
+	  //  {
+			// shootIR(power.on);
+	  //  }
 	};
 	recog.start();
   }
