@@ -25,7 +25,7 @@ recog.onresult = function(e) {
   // alert(e.results[0][0].transcript);
    if(e.results[0][0].transcript == "on")
    {
-		alert("on");
+   	shootIR(power.on);
    }
 };
 recog.start();
