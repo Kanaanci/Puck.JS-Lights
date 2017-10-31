@@ -19,11 +19,11 @@ function getSpeech() {
 	recog.onresult = function(e) {
 	   document.getElementById('saying').innerText = e.results[0][0].transcript;
 	  // alert(e.results[0][0].transcript);
-	  var speechResult = e.reults[0][0].transcript;
-	  alert(speechResult);
+	  // var speechResult = e.reults[0][0].transcript;
+	  // alert(speechResult);
 	   if(e.results[0][0].transcript == "on")
 	   {
-	   	shootIR(power.on);
+			shootIR(power.on);
 	   }
 	};
 	recog.start();
