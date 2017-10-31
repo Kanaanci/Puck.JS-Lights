@@ -34,18 +34,18 @@ var power = {
 			smooth: [9.2,4.5,0.6,0.4,0.7,0.4,0.7,0.4,0.7,0.4,0.6,0.5,0.7,0.5,0.6,0.5,0.7,0.4,0.7,1.6,0.7,1.6,0.7,1.6,0.7,1.6,0.7,1.6,0.7,1.6,0.7,1.6,0.6,1.6,0.7,0.4,0.6,0.5,0.6,1.6,0.7,1.6,0.7,0.4,0.7,0.4,0.6,0.5,0.7,0.4,0.7,1.6,0.6,1.6,0.7,0.4,0.7,0.5,0.6,1.6,0.6,1.6,0.7,1.6,0.7,1.6,0.6,39.9,9.1,2.2,0.6]
 		};
 
-function getSpeech() {
-    var recog = new webkitSpeechRecognition();
-	recog.lang = 'en-us';
-	recog.continuous = false;
-	recog.interimResults = false;
-	recog.maxAlternative = 5;
-	recog.onresult = function(e) {
-		document.getElementById('saying').innerText = e.results[0][0].transcript;
-		alert(e.results[0][0].transcript);
-	}		
-	recog.start();
-}
+// function getSpeech() {
+//     var recog = new webkitSpeechRecognition();
+// 	recog.lang = 'en-us';
+// 	recog.continuous = false;
+// 	recog.interimResults = false;
+// 	recog.maxAlternative = 5;
+// 	recog.onresult = function(e) {
+// 		document.getElementById('saying').innerText = e.results[0][0].transcript;
+// 		alert(e.results[0][0].transcript);
+// 	}		
+// 	recog.start();
+// }
 
 function shootIR(array){
 	Puck.write('Puck.IR(['+array+']);\n')
