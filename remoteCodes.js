@@ -45,7 +45,7 @@ function getSpeech() {
 		var speechResult = e.results[0][0].transcript;
 	};
 	recog.start();
-	if(speechResult == on) {
+	if(speechResult == "on") {
 		shootIR(power.on);
 	}
 }
