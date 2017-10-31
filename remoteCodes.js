@@ -42,11 +42,12 @@ function getSpeech() {
 	recog.maxAlternative = 5;
 	recog.onresult = function(e) {
 		document.getElementById('saying').innerText = e.results[0][0].transcript;
+		aler(e.results[0][0].transcript)
+		var speechResult = e.results[0][0].transcript;
 		alert(speechResult);
 	};
 	recog.start();
 	
-	var speechResult = e.results[0][0].transcript;
 	if(speechResult == "on") {
 		shootIR(power.on);
 	}
