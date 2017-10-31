@@ -42,16 +42,8 @@ function getSpeech() {
 	recog.maxAlternative = 5;
 	recog.onresult = function(e) {
 		document.getElementById('saying').innerText = e.results[0][0].transcript;
-		aler(e.results[0][0].transcript)
-		var speechResult = e.results[0][0].transcript;
-		alert(speechResult);
-	};
+		aler(e.results[0][0].transcript);
 	recog.start();
-	
-	if(speechResult == "on") {
-		shootIR(power.on);
-	}
-}
 
 function shootIR(array){
 	Puck.write('Puck.IR(['+array+']);\n')
