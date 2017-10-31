@@ -42,8 +42,8 @@ function getSpeech() {
 	recog.maxAlternative = 5;
 	recog.onresult = function(e) {
 		document.getElementById('saying').innerText = e.results[0][0].transcript;
-
-}		alert(e.results[0][0].transcript);
+		alert(e.results[0][0].transcript);
+	}		
 	recog.start();
 }
 
