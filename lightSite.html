@@ -4,7 +4,9 @@
 <head>
 	<title></title>
     <meta charset="utf-8">
+	<link rel="stylesheet" href="remoteStyle.css">
 	<script src="remoteCodes.js"></script>
+	<script src="speech.js"></script>
 	<script src="https://www.puck-js.com/puck.js"></script>
 </head>
 <body>
@@ -12,7 +14,19 @@
    <input type="button" value="Speak" onclick="getSpeech()">
    <br>Text: <span id="saying"></span>
    <br><br>
- 
+<script>
+   function getSpeech() {
+     var recog = new webkitSpeechRecognition();
+recog.lang = 'en-us';
+recog.continuous = false;
+recog.interimResults = false;
+recog.maxAlternative = 5;
+recog.onresult = function(e) {
+   document.getElementById('saying').innerText = e.results[0][0].transcript;
+};
+recog.start();
+   }
+   </script> 
 	<!-- Power -->
 	<button onclick="shootIR(power.on)">ON</button>
 	<button onclick="shootIR(power.off)">OFF</button>
