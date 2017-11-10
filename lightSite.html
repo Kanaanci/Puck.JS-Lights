@@ -7,10 +7,12 @@
 	<script src="remoteCodes.js"></script>
 	<script src="speech.js"></script>
 	<script src="https://www.puck-js.com/puck.js"></script>
-	<meta content='width=device-width, initial-scale=1' name='viewport'/>
 
+	<!-- Make it more mobile friendly -->
+	<meta content='width=device-width, initial-scale=1' name='viewport'/> 
 
 <script>
+	// Googles speech to text functions
 function getSpeech() {
 	var recog = new webkitSpeechRecognition();
 	recog.lang = 'en-us';
@@ -21,14 +23,16 @@ function getSpeech() {
 	recog.onresult = function(e) {
 	   document.getElementById('saying').innerText = e.results[0][0].transcript;
 
+	   // If speech to text is equivalent to these strings
 	   switch(e.results[0][0].transcript) {
+	   	 // Power codes
 	   	case "on":
 	   		shootIR(power.on);
 	   		break;
 	   	case "off": 
 	   		shootIR(power.off);
 	   		break;
-	   
+	   // Color codes red
 	   	case "R1":
 	   		shootIR(colors.R1);
 	   		break;
@@ -44,7 +48,7 @@ function getSpeech() {
 	   	case "R5":
 	   		shootIR(colors.R5);
 	   		break;
-	   
+	   // Color codes green
 	   	case "G1":
 	   		shootIR(colors.G1);
 	   		break;
@@ -60,7 +64,7 @@ function getSpeech() {
 	   	case "G5":
 	   		shootIR(colors.G5);
 	   		break;
-
+	   	// Color codes blue
 	   	case "B1":
 	   		shootIR(colors.B1);
 	   		break;
@@ -80,10 +84,6 @@ function getSpeech() {
 	   	default:
 	   		break;
 	   }
-	  //  if(e.results[0][0].transcript == "on")
-	  //  {
-			// shootIR(power.on);
-	  //  }
 	};
 	recog.start();
   }
@@ -91,14 +91,15 @@ function getSpeech() {
 
 </head>
 <body>
-
+	<!-- Button to start speech recognition and displaying text on page -->
    <input type="button" value="Speak" onclick="getSpeech()">
    <br>Text: <span id="saying"></span>
    <br><br>
-
+   <!-- Forces the webpage to open a BLE connection pop up -->
 	<button onclick="Puck.write('LED1.reset();\n')">PAIR</button>
 	<br>
 
+	<!-- Buttons to control the puck as well -->
 	<!-- Power -->
 	<button onclick="shootIR(power.on)">ON</button>
 	<button onclick="shootIR(power.off)">OFF</button>
