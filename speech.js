@@ -66,7 +66,29 @@ function getSpeech() {
 	   	case "B5":
 	   		shootIR(colors.B5);
 	   		break;
-
+	   	//Color code white
+	   	case "White":
+	   		shootIR(colors.W1);
+	   		break;
+	   	//Effects
+	   	case "dimmer":
+	   		shootIR(effects.dim);
+	   		break;
+	   	case "brighter":
+	   		shootIR(effects.bright);
+	   		break;
+	   	case "Flash":
+	   		shootIR(effects.flash);
+	   		break;
+	   	case "strobe":
+	   		shootIR(effects.strobe);
+	   		break;
+	   	case "fade":
+	   		shootIR(effects.fade);
+	   		break;
+	   	case "smooth":
+	   		shootIR(effects.smooth);
+	   		break;
 	   	default:
 	   		break;
 	   }
