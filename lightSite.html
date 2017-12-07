@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-	<title></title>
+	<title>Puck.JS</title>
     <meta charset="utf-8">
-	<LINK rel=StyleSheet href="puckCss.css" type="text/css">
+    <LINK rel=StyleSheet href="puckCss.css" type="text/css">
 	<script src="remoteCodes.js"></script>
 	<script src="speech.js"></script>
 	<script src="https://www.puck-js.com/puck.js"></script>
@@ -15,56 +15,56 @@
 </head>
 <body>
 	   <!-- Forces the webpage to open a BLE connection pop up -->
-	<button onclick="Puck.write('LED1.reset();\n')">Pair w/ Puck</button>
+	<button class="button16" onclick="Puck.write('LED1.reset();\n')">Pair w/ Puck</button>
 	<br><br>
 
 	<!-- Button to start speech recognition and displaying text on page -->
-   <input type="button" value="Speak" onclick="getSpeech()">
+   <input class="button16" type="button" value="Speak" onclick="getSpeech()">
    <br>Speech to text: <span id="saying"></span>
    <br><br>
 
 	<!-- Buttons to control the puck as well -->
 	<!-- Power -->
-	<button onclick="shootIR(power.on)">ON</button>
-	<button onclick="shootIR(power.off)">OFF</button>
+	<button class="button16" onclick="shootIR(power.on)">ON</button>
+	<button class="button16" onclick="shootIR(power.off)">OFF</button>
 	<br>
 
 	<!-- Reds -->
-	<button onclick="shootIR(colors.R1)">R1</button>
-	<button onclick="shootIR(colors.R2)">R2</button>
-	<button onclick="shootIR(colors.R3)">R3</button>
-	<button onclick="shootIR(colors.R4)">R4</button>
-	<button onclick="shootIR(colors.R5)">R5</button>
+	<button class="button1" onclick="shootIR(colors.R1)">Color 1</button>
+	<button class="button2" onclick="shootIR(colors.R2)">Color 2</button>
+	<button class="button3" onclick="shootIR(colors.R3)">Color 3</button>
+	<button class="button4" onclick="shootIR(colors.R4)">Color 4</button>
+	<button class="button5" onclick="shootIR(colors.R5)">Color 5</button>
 	<br>
 
 	<!-- Greens -->
-	<button onclick="shootIR(colors.G1)">G1</button>
-	<button onclick="shootIR(colors.G2)">G2</button>
-	<button onclick="shootIR(colors.G3)">G3</button>
-	<button onclick="shootIR(colors.G4)">G4</button>
-	<button onclick="shootIR(colors.G5)">G5</button>
+	<button class="button6" onclick="shootIR(colors.G1)">Color 6</button>
+	<button class="button7" onclick="shootIR(colors.G2)">Color 7</button>
+	<button class="button8" onclick="shootIR(colors.G3)">Color 8</button>
+	<button class="button9" onclick="shootIR(colors.G4)">Color 9</button>
+	<button class="button10" onclick="shootIR(colors.G5)">Color 10</button>
 	<br>
 
 	<!-- Blues -->
-	<button onclick="shootIR(colors.B1)">B1</button>
-	<button onclick="shootIR(colors.B2)">B2</button>
-	<button onclick="shootIR(colors.B3)">B3</button>
-	<button onclick="shootIR(colors.B4)">B4</button>
-	<button onclick="shootIR(colors.B5)">B5</button>
+	<button class="button11" onclick="shootIR(colors.B1)">Color 11</button>
+	<button class="button12" onclick="shootIR(colors.B2)">Color 12</button>
+	<button class="button13" onclick="shootIR(colors.B3)">Color 13</button>
+	<button class="button14" onclick="shootIR(colors.B4)">Color 14</button>
+	<button class="button15" onclick="shootIR(colors.B5)">Color 15</button>
 	<br>
 
 	<!-- White -->
-	<button onclick="shootIR(colors.W1)">White</button>
+	<button class="button16" onclick="shootIR(colors.W1)">Color 16</button>
 	<br>
 
 	<!-- Effects -->
-	<button onclick="shootIR(effects.dim)">Dimmer</button>
-	<button onclick="shootIR(effects.bright)">Brighter</button>
+	<button class="button16" onclick="shootIR(effects.dim)">Dimmer</button>
+	<button class="button16" onclick="shootIR(effects.bright)">Brighter</button>
 	<br>
-	<button onclick="shootIR(effects.flash)">Flash</button>
-	<button onclick="shootIR(effects.strobe)">Strobe</button>
-	<button onclick="shootIR(effects.fade)">Fade</button>
-	<button onclick="shootIR(effects.smooth)">Smooth</button>
+	<button class="button16" onclick="shootIR(effects.flash)">Flash</button>
+	<button class="button16" onclick="shootIR(effects.strobe)">Strobe</button>
+	<button class="button16" onclick="shootIR(effects.fade)">Fade</button>
+	<button class="button16" onclick="shootIR(effects.smooth)">Smooth</button>
 
 </body>
 </html>
