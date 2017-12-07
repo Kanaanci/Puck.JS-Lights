@@ -28,7 +28,7 @@ function getSpeech() {
 	   	case "color 3":
 	   		shootIR(colors.R3);
 	   		break;
-	   	case "color 4":
+	   	case "color for":
 	   		shootIR(colors.R4);
 	   		break;
 	   	case "color 5":
