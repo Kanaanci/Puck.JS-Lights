@@ -8,7 +8,6 @@ function getSpeech() {
 
 	recog.onresult = function(e) {
 	   document.getElementById('saying').innerText = e.results[0][0].transcript;
-		//alert(e.results[0][0].transcript);
 
 	   // If speech to text is equivalent to these strings
 	   switch(e.results[0][0].transcript) {
