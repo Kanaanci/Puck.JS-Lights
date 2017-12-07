@@ -19,55 +19,55 @@ function getSpeech() {
 	   		shootIR(power.off);
 	   		break;
 	   // Color codes red
-	   	case "R1":
+	   	case "color one":
 	   		shootIR(colors.R1);
 	   		break;
-	   	case "R2":
+	   	case "color to":
 	   		shootIR(colors.R2);
 	   		break;
-	   	case "R3":
+	   	case "color 3":
 	   		shootIR(colors.R3);
 	   		break;
-	   	case "R4":
+	   	case "color 4":
 	   		shootIR(colors.R4);
 	   		break;
-	   	case "R5":
+	   	case "color 5":
 	   		shootIR(colors.R5);
 	   		break;
 	   // Color codes green
-	   	case "G1":
+	   	case "color 6":
 	   		shootIR(colors.G1);
 	   		break;
-	   	case "G2":
+	   	case "color 7":
 	   		shootIR(colors.G2);
 	   		break;
-	   	case "G3":
+	   	case "color 8":
 	   		shootIR(colors.G3);
 	   		break;
-	   	case "G4":
+	   	case "color 9":
 	   		shootIR(colors.G4);
 	   		break;
-	   	case "G5":
+	   	case "color 10":
 	   		shootIR(colors.G5);
 	   		break;
 	   	// Color codes blue
-	   	case "B1":
+	   	case "color 11":
 	   		shootIR(colors.B1);
 	   		break;
-	   	case "B2":
+	   	case "color 12":
 	   		shootIR(colors.B2);
 	   		break;
-	   	case "B3":
+	   	case "color 13":
 	   		shootIR(colors.B3);
 	   		break;
-	   	case "B4":
+	   	case "color 14":
 	   		shootIR(colors.B4);
 	   		break;
-	   	case "B5":
+	   	case "color 15":
 	   		shootIR(colors.B5);
 	   		break;
 	   	//Color code white
-	   	case "White":
+	   	case "color 16":
 	   		shootIR(colors.W1);
 	   		break;
 	   	//Effects
