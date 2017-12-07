@@ -77,3 +77,6 @@
 	background-color: rgb(247, 247, 247);
 	border-radius: 30px;
 }
+.button16:active{
+	color: black;
+}
